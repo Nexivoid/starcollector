@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Star Collector</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    * {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="ui">
+    <div id="score">Points: <span id="scoreVal">0</span></div>
+    <div id="time">Time: <span id="timeVal">60</span>s</div>
+    <button id="restart" class="btn">Replay</button>
+    <div id="instructions">
+      Movement: Arrows or WASD
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <div id="touchControls" aria-hidden="true">
+    <button class="tp" id="up">▲</button>
+    <button class="tp" id="left">◀</button>
+    <button class="tp" id="down">▼</button>
+    <button class="tp" id="right">▶</button>
+  </div>
+
+  <script src="assets/game.js"></script>
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
+</body>
+</html>
